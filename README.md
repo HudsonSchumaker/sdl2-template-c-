@@ -1,7 +1,7 @@
 # SDL2 template c++ VS
 
 on SDL2.zip file you will find the libs for Win32 and x64 systems. <br>
-Unzip the file, put the SDL2 folder on the C:\ and link to the project like beloow: 
+Unzip the file, put the SDL2 folder on the C:\ and link to the project like bellow: 
 <br><br>
 
 General project settings <br>
