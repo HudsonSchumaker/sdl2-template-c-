@@ -1,5 +1,7 @@
 # SDL2 template c++ VS
 
+on SDL2.zip file you will find the libs for Win32 and x64 systems. <br><br>
+
 General project settings <br>
 ![image](https://user-images.githubusercontent.com/28131345/185706867-bcb8865c-de45-4cee-aa6c-debe74ab8ae3.png)
 <br><br>
