@@ -3,6 +3,8 @@
 
 SDL_Window* window;
 SDL_Renderer* renderer;
+unsigned short WIDTH = 0;
+unsigned short HEIGHT = 0;
 
 int threadFunction(void* data) {
     for (int i = 0; i < 90000000; i++) {
@@ -20,10 +22,15 @@ void setUp() {
     int data = 10;
     SDL_Thread* thread = SDL_CreateThread(threadFunction, "runner", (void*)data);
 
+    SDL_DisplayMode displayMode;
+    SDL_GetCurrentDisplayMode(0, &displayMode);
+    WIDTH = displayMode.w;
+    HEIGHT = displayMode.h;
+
     window = SDL_CreateWindow(
         Common::TITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-        Common::WIDTH,
-        Common::HEIGHT,
+        WIDTH,
+        HEIGHT,
         SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL
     );
 
@@ -36,13 +43,15 @@ void setUp() {
 
 void quit() {
     SDL_Quit();
-    TTF_Quit();
+    IMG_Quit();
+	TTF_Quit();
+    Mix_Quit();
 }
 
 int main(int argc, char* argv[]) {
     setUp();
     
-    Splash* splash = new Splash(renderer);
+    Splash* splash = new Splash(renderer, WIDTH, HEIGHT);
     delete splash;
     
     quit();
