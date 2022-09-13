@@ -16,6 +16,7 @@ SDL2main.lib   <br>
 SDL2_ttf.lib   <br>
 SDL2_image.lib <br>
 SDL2_mixer.lib <br>
+SDL2_net.lib   <br>
 <br>
 ![image](https://user-images.githubusercontent.com/28131345/185707519-9fc08145-c4ea-41c5-87d7-f36d73415d3f.png)
 
