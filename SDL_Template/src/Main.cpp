@@ -19,6 +19,7 @@ void setUp() {
 
     SDL_Init(SDL_INIT_EVERYTHING);
     TTF_Init();
+    SDLNet_Init();
     int data = 10;
     SDL_Thread* thread = SDL_CreateThread(threadFunction, "runner", (void*)data);
 
