@@ -45,8 +45,9 @@ void setUp() {
 void quit() {
     SDL_Quit();
     IMG_Quit();
-	TTF_Quit();
+    TTF_Quit();
     Mix_Quit();
+    SDLNet_Quit();
 }
 
 int main(int argc, char* argv[]) {
